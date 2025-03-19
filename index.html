@@ -24,12 +24,37 @@
             margin: 20px 0;
         }
         .container {
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .polaroid-gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .polaroid {
+            background: white;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: rotate(2deg);
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+        }
+        .polaroid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .polaroid p {
+            font-size: 1rem;
+            margin: 10px 0 0;
+            color: #666;
         }
         button {
             padding: 10px 20px;
@@ -65,6 +90,23 @@
         <p>Você é incrível, inteligente, divertida e, acima de tudo, alguém que eu quero ter ao meu lado todos os dias.</p>
         <p>Por isso, eu tenho uma pergunta muito importante para fazer...</p>
         <p><strong>Você aceita namorar comigo?</strong></p>
+
+        <!-- Galeria de fotos em formato polaroid -->
+        <div class="polaroid-gallery">
+            <div class="polaroid">
+                <img src="foto1.jpg" alt="Nossa primeira foto">
+                <p>Nossa primeira foto ❤️</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto2.jpg" alt="Um momento especial">
+                <p>Um momento especial</p>
+            </div>
+            <div class="polaroid">
+                <img src="foto3.jpg" alt="Sorrindo juntos">
+                <p>Sorrindo juntos</p>
+            </div>
+        </div>
+
         <div>
             <button onclick="alert('Ebaaa! Você fez o meu dia! ❤️')">Sim!</button>
             <button onclick="alert('Vou te conquistar ainda! 😊')">Ainda não</button>
