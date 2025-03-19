@@ -3,36 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Você aceita namorar comigo?</title>
+    <title>Para Ana Júlia ❤️</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            text-align: center;
+            font-family: 'Arial', sans-serif;
             background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
             padding: 50px;
+            margin: 0;
         }
         h1 {
             color: #e91e63;
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin: 20px 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         button {
             padding: 10px 20px;
-            font-size: 18px;
+            font-size: 1rem;
             background-color: #e91e63;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease;
         }
         button:hover {
             background-color: #d81b60;
         }
+        .heart {
+            color: #e91e63;
+            font-size: 2rem;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
     </style>
 </head>
 <body>
-    <h1>Oi, [Nome dela]!</h1>
-    <p>Eu tenho uma pergunta muito importante para fazer...</p>
-    <p>Você aceita namorar comigo?</p>
-    <button onclick="alert('Ebaaa! Você fez o meu dia! ❤️')">Sim!</button>
-    <button onclick="alert('Vou te conquistar ainda! 😊')">Ainda não</button>
+    <div class="container">
+        <h1>Para Ana Júlia ❤️</h1>
+        <p>Oi, Ana Júlia!</p>
+        <p>Desde o momento em que te conheci, você trouxe uma luz especial para a minha vida. Cada sorriso seu, cada palavra, cada momento ao seu lado me fazem sentir algo que nunca senti antes.</p>
+        <p>Você é incrível, inteligente, divertida e, acima de tudo, alguém que eu quero ter ao meu lado todos os dias.</p>
+        <p>Por isso, eu tenho uma pergunta muito importante para fazer...</p>
+        <p><strong>Você aceita namorar comigo?</strong></p>
+        <div>
+            <button onclick="alert('Ebaaa! Você fez o meu dia! ❤️')">Sim!</button>
+            <button onclick="alert('Vou te conquistar ainda! 😊')">Ainda não</button>
+        </div>
+        <p class="heart">❤️</p>
+    </div>
 </body>
 </html>
