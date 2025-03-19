@@ -87,8 +87,9 @@
         <h1>Para Ana Júlia ❤️</h1>
         <p>Oi, meu amor!</p>
         <p>Desde o momento em que te conheci, você trouxe uma luz especial para a minha vida. Cada sorriso seu, cada palavra, cada momento ao seu lado me fazem sentir algo que nunca senti antes.</p>
-        <p>Você é incrível, perfeita, divertida e, acima de tudo, alguém que eu quero ter ao meu lado todos os dias.</p>
+        <p>Você é incrível, divertida, perfeita e, acima de tudo, alguém que eu quero ter ao meu lado todos os dias.</p>
         <p>Por isso, eu tenho uma pergunta muito importante para fazer...</p>
+        <p><strong>Você aceita namorar comigo?</strong></p>
 
         <!-- Galeria de fotos em formato polaroid -->
         <div class="polaroid-gallery">
@@ -105,12 +106,20 @@
                 <p>Sorrindo juntos</p>
             </div>
         </div>
-        
-        <p><strong>Você aceita namorar comigo?</strong></p>
 
         <div>
             <button id="simButton">Sim!</button>
-            <!-- Script para os confetes -->
+            <button onclick="alert('Vou te conquistar ainda! 😊')">Ainda não</button>
+        </div>
+        <p class="heart">❤️</p>
+    </div>
+
+    <!-- Áudio para tocar a música de fundo -->
+    <audio id="backgroundMusic" loop>
+        <source src="musica.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Script para os confetes e música -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
         // Função para disparar confetes
@@ -127,11 +136,23 @@
             alert('Eu te amo, meu amor! ❤️');
             soltarConfetes(); // Soltar confetes
         });
+
+        // Tocar a música de fundo automaticamente
+        window.onload = function() {
+            var audio = document.getElementById('backgroundMusic');
+            audio.play().catch(() => {
+                // Caso o navegador bloqueie o autoplay, exibe um aviso
+                alert("Clique em qualquer lugar da página para ativar a música de fundo.");
+            });
+        };
+
+        // Permitir que a música seja tocada após interação do usuário
+        document.body.addEventListener('click', function() {
+            var audio = document.getElementById('backgroundMusic');
+            if (audio.paused) {
+                audio.play();
+            }
+        });
     </script>
-            <button onclick="alert('Vou te conquistar ainda! 😊')">Ainda não</button>
-        </div>
-        <p class="heart">❤️</p>
-    </div>
-    
 </body>
 </html>
